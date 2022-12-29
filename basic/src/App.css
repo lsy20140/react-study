@@ -18,6 +18,12 @@
   border-radius: 100%;
 }
 
+.avatar{
+  position: relative;
+  width: 300px;
+  text-align: center;
+}
+
 .new{
   position: absolute;
   left: 68%;
@@ -28,3 +34,4 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
