@@ -26,9 +26,21 @@ export default function AppMentors() {
       }
       return mentor;
     })})
-
-    
   };
+
+  const handleAdd = () => {
+    const addName = prompt(`추가할 멘토의 이름을 입력하세요.`);
+    const addTitle = prompt(`추가할 멘토의 타이틀을 입력하세요.`);
+    
+    setPerson({...person, mentors: [...person.mentors, {name:addName, title:addTitle}]});
+
+  }
+
+  const handleDelete = () => {
+    const delName = prompt(`삭제할 멘토의 이름을 입력하세요.`);
+
+    setPerson({...person, mentors: person.mentors.filter((mentor) => mentor.name !== delName)})
+  }
 
 
   return (
@@ -48,6 +60,20 @@ export default function AppMentors() {
         onClick={handleNameChange}
       >
         멘토의 이름을 바꾸기
+      </button>
+
+      {/* 멘토 추가/삭제 하기 */}
+      <button 
+        onClick={handleAdd}
+        
+      >
+        멘토 추가하기
+      </button>
+
+      <button 
+        onClick={handleDelete}
+      >
+        멘토 삭제하기
       </button>
     </div>
   )
