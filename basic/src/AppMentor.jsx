@@ -1,16 +1,7 @@
 import React, {useState} from 'react'
 
 export default function AppMentor() {
-  const [person, setPerson] = useState({
-    name: '세윤',
-    title: '개발자',
-    mentor: [
-      {
-      name: '밥',
-      title: '시니어 개발자',
-      },
-    ]
-  });
+  const [person, setPerson] = useState(initialPerson);
 
   const handleNameChange = () =>{
     const name = prompt(`바꿀 멘토의 이름을 입력하세요.`)
@@ -45,3 +36,14 @@ export default function AppMentor() {
     </div>
   )
 }
+
+const initialPerson= {
+  name: '세윤',
+  title: '개발자',
+  mentor: [
+    {
+    name: '밥',
+    title: '시니어 개발자',
+    },
+  ],
+};
