@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AddTodo from './components/AddTodo';
-import { FaTrashAlt } from 'react-icons/fa';
+import Todo from './components/Todo';
 
 export default function AppTodolist() {
  
@@ -10,8 +10,15 @@ export default function AppTodolist() {
 
 
   const handleAdd = (todo) => {
-    //새로운 todo 추가
     setTodos([...todos, todo])
+  }
+
+  const handleUpdate = (updated) => {
+    setTodos(todos.map((item) => item.id === updated.id ? updated : item))
+  }
+
+  const handleDelete = (deleted) => {
+    setTodos(todos.filter(item => item.id !== deleted.id));
   }
 
 
@@ -21,8 +28,7 @@ export default function AppTodolist() {
       <ul>
         {
           todos.map((item) => (
-            <li key={item.id}>{item.text}</li>
-            
+            <Todo key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete}/>
           ))
         }
       </ul>
