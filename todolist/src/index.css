@@ -3,9 +3,18 @@
   --color-bg: #fdfffd;
   --color-grey: #d1d1d1;
   --color-text: #22243b;
-  --color-accent: #233765;
+  --color-accent: #22273b;
   --color-white: #ffffff;
   --color-scrollbar: #aaa7a7;
+}
+
+html.dark{
+  --color-bg-dark: #22273b;
+  --color-bg: #22253b;
+  --color-grey: #d1d1d1;
+  --color-text: #ffffff;
+  --color-accent: #FFDFDE;
+  --color-white: #22243b
 }
 
 body {

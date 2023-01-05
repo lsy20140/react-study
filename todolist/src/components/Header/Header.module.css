@@ -1,9 +1,23 @@
 .header {
   display: flex;
   justify-content: space-between;
+  padding: 0 0.5rem;
   align-items: center;
   background-color: var(--color-bg-dark);
   border-bottom: 1px solid var(--color-grey);
+}
+
+.toggle{
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: var(--color-text);
+  transition: all 150ms ease-out;
+}
+
+.toggle:hover{
+  transform: scale(1.1);
+  color: var(--color-accent);
 }
 
 .filters {
@@ -29,5 +43,5 @@
   content:'';
   display: block;
   margin-top: 0.2rem;
-  border: 2px solid #233765;
+  border: 2px solid var(--color-accent);
 }
