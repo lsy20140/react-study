@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import AddTodo from './components/AddTodo';
-import Todo from './components/Todo';
+import AddTodo from '../AddTodo/AddTodo';
+import Todo from '../Todo/Todo';
+import styles from './AppTodolist.module.css'
+
 
 export default function AppTodolist({filter}) {
  
@@ -24,8 +26,8 @@ export default function AppTodolist({filter}) {
   const filtered = getFilteredItems(todos, filter);
   
   return (
-    <section>
-      <ul>
+    <section className={styles.container}> 
+      <ul className={styles.list}>
         {
           filtered.map((item) => (
             
