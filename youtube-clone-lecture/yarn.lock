@@ -2446,6 +2446,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:4.21.0":
+  version: 4.21.0
+  resolution: "@tanstack/query-core@npm:4.21.0"
+  checksum: 3f56bd95bc3461888fd1e02e0cbcd8c8cf2ba0730a2834d864b0b2d5fb8bced0ec27400a03a7bae646382e974b0a4c6eaf9a0f0ad57206e966fb608db9ec9201
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.21.0":
+  version: 4.21.0
+  resolution: "@tanstack/react-query@npm:4.21.0"
+  dependencies:
+    "@tanstack/query-core": 4.21.0
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 639f966e726ed3b8f2f4227d74689123870ad17a353a30fa7dc115153df514d608872f677cf545e2c5257a8f81ae35dbc87fd12e0892b86762c268e1b95c5960
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^8.5.0":
   version: 8.19.1
   resolution: "@testing-library/dom@npm:8.19.1"
@@ -12292,6 +12318,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -13048,6 +13083,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "youtube-clone-lecture@workspace:."
   dependencies:
+    "@tanstack/react-query": ^4.21.0
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
