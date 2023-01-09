@@ -16,12 +16,16 @@ export default function Videos() {
       <div>Videos for {keyword}</div>
       {isLoading && <p>Loading중...</p>}
       {error && <p>에러 발생...😅</p>}
-      {videos && (<ul>
-        {videos.map((video) => (
-          <VideoCard key={video.id} video={video} />
-        ))}
-        </ul>
-        )}
+      <div className='display-grid col-span-2 md:col-span-6'>
+        {videos && (
+        <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4'>
+          {videos.map((video) => (
+            <VideoCard key={video.id} video={video}/>
+          ))}
+          </ul>
+          )}
+      </div>
+
     </>
 
   )
