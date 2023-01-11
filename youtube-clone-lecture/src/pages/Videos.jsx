@@ -13,7 +13,6 @@ export default function Videos() {
 
   return (
     <>
-      <div>Videos for {keyword}</div>
       {isLoading && <p>Loading중...</p>}
       {error && <p>에러 발생...😅</p>}
       <div className='display-grid col-span-2 md:col-span-6'>

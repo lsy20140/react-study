@@ -8,7 +8,7 @@ export default function VideoCard({video}) {
   const navigate = useNavigate();
 
   return (
-  <li onClick={() => {navigate(`videos/watch/${video.id}`, {state: {video}})} }>
+  <li onClick={() => {navigate(`/videos/watch/${video.id}`, {state: {video}})} }>
     <img className='cursor-pointer w-full' src={thumbnails.medium.url} alt={title}/>
     <div>
       <p className='cursor-pointer my-2 font-semibold line-clamp-2' >{title}</p>
